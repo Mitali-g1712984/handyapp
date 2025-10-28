@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "971856060315",
+    "project_id": "handy-customer-b9997",
+    "storage_bucket": "handy-customer-b9997.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971856060315:android:d34570397cc482381c4b3e",
+        "android_client_info": {
+          "package_name": "com.incodes.homeserviceuser"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDe7lv1dABQ3yydPIrj8F5OWPV9Ght6MLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
