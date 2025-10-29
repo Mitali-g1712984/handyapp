@@ -30,7 +30,7 @@ target 'Runner' do
   use_frameworks!
   use_modular_headers!
 
-  # ✅ Added line to fix Stripe version conflict
+  # ✅ Stripe fix (keeps versions aligned)
   pod 'StripeFinancialConnections', '~> 23.28.0'
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
@@ -40,8 +40,13 @@ target 'Runner' do
   end
 end
 
+# ✅ Proper post_install block
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     flutter_additional_ios_build_settings(target)
+    target.build_configurations.each do |config|
+      # Force iOS 13.0 minimum
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+    end
   end
 end
